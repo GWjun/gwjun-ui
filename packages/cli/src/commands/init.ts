@@ -1,4 +1,4 @@
-import * as fs from 'fs-extra';
+import fs from 'fs-extra';
 import * as path from 'path';
 import { input } from '@inquirer/prompts';
 import { setConfig } from '../utils/config';
@@ -9,13 +9,13 @@ export async function init(inputPath?: string) {
   if (!inputPath) {
     relativePath = await input({
       message: 'Path for component storage from the project root:',
-      default: './components',
+      default: 'src/components',
     });
   } else {
     relativePath = inputPath;
   }
 
-  const absolutePath = path.resolve(process.cwd(), relativePath);
+  const absolutePath = path.join(process.cwd(), relativePath);
 
   try {
     await fs.ensureDir(absolutePath);

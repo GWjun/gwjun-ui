@@ -1,4 +1,4 @@
-import * as fs from 'fs-extra';
+import fs from 'fs-extra';
 import * as path from 'path';
 
 const CONFIG_FILE = path.join(process.cwd(), 'component-config.json');
