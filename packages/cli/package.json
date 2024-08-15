@@ -1,0 +1,37 @@
+{
+  "name": "gwjun-ui",
+  "version": "0.1.0",
+  "description": "headless design-system using the emotion library",
+  "main": "dist/index.js",
+  "bin": {
+    "gwjun-ui": "dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GWjun/gwjun-ui",
+    "directory": "packages/cli"
+  },
+  "keywords": [
+    "gwjun-ui",
+    "headless",
+    "design-system",
+    "react",
+    "emotion"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "author": "gwjun",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.3.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.8",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0"
+  }
+}

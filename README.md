@@ -1,18 +1,32 @@
-<h1 align="center">GWjun's Design System</h1>
+<h1 align="center">GWjun UI</h1>
 
-**A headless design system that uses the `emotion` css library.**
+**A headless design system that uses the [emotion](https://github.com/emotion-js/emotion) css library.**
 <br>
 <br>
 You can inject each component codes into your project, like [shadcn-ui](https://github.com/shadcn-ui/ui)
 
-## Installation
+## Usage
 
-```sh
+Use the `init` command to initialize dependencies for a new project.
 
+The `init` command sets up the component-config.json file, which makes configuration settings.
+
+```bash
+npx gwjun-ui init
 ```
 
-## Getting started
+## add
 
-```tsx
+Use the `add` command to add components to your project.
 
+The `add` command adds a component to your project and installs all required dependencies.
+
+```bash
+npx gwjun-ui add [component]
+```
+
+### Example
+
+```bash
+npx gwjun-ui add button
 ```
