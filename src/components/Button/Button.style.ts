@@ -1,8 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { ButtonProps } from '.';
 
-import theme from 'src/styles/theme.ts';
-import { darken } from 'src/styles/util';
+import theme from '#styles/theme';
+import { darken } from '#styles/util';
 
 const { colors, borderRadius, text } = theme;
 

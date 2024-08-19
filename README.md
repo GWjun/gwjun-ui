@@ -5,6 +5,29 @@
 <br>
 You can inject each component codes into your project, like [shadcn-ui](https://github.com/shadcn-ui/ui)
 
+## Installation
+
+Add baseUrl and alias in your `tsconfig.json` to correctly configure the import paths for utility functions.
+<br>
+<br>
+If you configured differently, you must input the alias according to the corresponding path when running `init`.
+
+```json
+/** tsconfig.json */
+{
+  "compilerOptions": {
+    // ...
+    "baseUrl": ".",
+    "paths": {
+      "#*": ["./src/*"]
+    }
+  }
+}
+```
+
+> **Note** > <br>
+> If you are using other frameworks or build tool such as `Vite`, additional steps may be required to configure `alias`.
+
 ## Usage
 
 ### init

@@ -21,7 +21,10 @@
     "noFallthroughCasesInSwitch": true,
 
     "jsxImportSource": "@emotion/react",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "#*": ["./src/*"]
+    }
   },
   "include": ["src"]
 }

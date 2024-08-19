@@ -1,6 +1,6 @@
 {
   "name": "gwjun-ui",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "headless design-system using the emotion library",
   "main": "dist/index.js",
   "type": "module",

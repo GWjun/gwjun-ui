@@ -3,12 +3,9 @@ import { program } from 'commander';
 import { init } from './commands/init';
 import { add } from './commands/add';
 
-program.version('0.1.0').description('CLI tool for managing components');
+program.version('0.1.5').description('CLI tool for managing components');
 
-program
-  .command('init [path]')
-  .description('Initialize the component storage location')
-  .action(init);
+program.command('init').description('Initialize the package').action(init);
 
 program
   .command('add <componentName>')
