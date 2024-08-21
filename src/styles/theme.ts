@@ -15,27 +15,27 @@ const colors = {
 
 const text = {
   lg: {
-    fontSize: '18px',
-    lineHeight: '28px',
+    fontSize: '1.125rem',
+    lineHeight: '1.75rem',
   },
   md: {
-    fontSize: '16px',
-    lineHeight: '24px',
+    fontSize: '1rem',
+    lineHeight: '1.5rem',
   },
   sm: {
-    fontSize: '14px',
-    lineHeight: '20px',
+    fontSize: '0.875rem',
+    lineHeight: '1.25rem',
   },
   xs: {
-    fontSize: '12px',
-    lineHeight: '20px',
+    fontSize: '0.75rem',
+    lineHeight: '1.25rem',
   },
 } as const;
 
 const borderRadius = {
-  sm: '4px',
-  md: '6px',
-  lg: '8px',
+  sm: '0.25rem',
+  md: '0.375rem',
+  lg: '0.5rem',
 } as const;
 
 const theme = {

@@ -22,7 +22,7 @@ If configured differently, you must input the alias according to the correspondi
 }
 ```
 
-> **Note** > <br>
+> **Note** <br>
 > If you are using other frameworks or build tool such as `Vite`, additional steps may be required to configure `alias`.
 
 ## Usage

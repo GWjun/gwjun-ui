@@ -72,12 +72,12 @@ export const sizeStyles: Record<
 > = {
   /** default styles */
   sm: css`
-    padding: 8px 12px;
+    padding: 0.5rem 0.75rem;
   `,
   md: css`
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
   `,
   lg: css`
-    padding: 14px 24px;
+    padding: 0.8rem 1.5rem;
   `,
 };

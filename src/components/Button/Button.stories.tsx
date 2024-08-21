@@ -4,6 +4,7 @@ import Button from '.';
 const meta = {
   title: 'Common/Button',
   component: Button,
+  tags: ['autodocs'],
   parameters: {
     layout: 'centered',
     docs: {
@@ -15,7 +16,7 @@ const meta = {
   argTypes: {
     variant: {
       description:
-        '버튼의 형식. 형식에 따라 color, border 등의 스타일이 정의됨.',
+        'button 형식. 형식에 따라 color, border 등의 스타일이 정의됨.',
       control: 'select',
       options: ['primary', 'secondary', 'outline', 'text', 'destructive'],
       table: {
@@ -25,8 +26,7 @@ const meta = {
       },
     },
     size: {
-      description:
-        '버튼의 크기. 3가지 사이즈가 존재하며, 사이즈에 따라 padding 값이 상이함.',
+      description: 'button 크기. 사이즈에 따라 padding 값이 상이함.',
       control: 'select',
       options: ['sm', 'md', 'lg'],
       table: {
@@ -45,7 +45,6 @@ const meta = {
       table: { disable: true },
     },
   },
-  tags: ['autodocs'],
   args: {
     children: 'Button',
   },

@@ -25,7 +25,7 @@ If you configured differently, you must input the alias according to the corresp
 }
 ```
 
-> **Note** > <br>
+> **Note** <br>
 > If you are using other frameworks or build tool such as `Vite`, additional steps may be required to configure `alias`.
 
 ## Usage
@@ -59,3 +59,5 @@ npx gwjun-ui add button
 ## Components
 
 - [Button](https://github.com/GWjun/gwjun-ui/tree/main/src/components/Button)
+- [Input](https://github.com/GWjun/gwjun-ui/tree/main/src/components/Input)
+- [Label](https://github.com/GWjun/gwjun-ui/tree/main/src/components/Label)
