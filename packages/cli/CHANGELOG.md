@@ -1,5 +1,12 @@
 # gwjun-ui
 
+## 0.1.7
+
+### Patch Changes
+
+- add styles version validation
+- add component alias config
+
 ## 0.1.5
 
 ### Patch Changes

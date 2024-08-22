@@ -2,8 +2,6 @@ import fs from 'fs-extra';
 import path from 'path';
 import { getConfig } from './config';
 
-const KEYWORDS = ['#styles'];
-
 export default async function ReplaceImport(targetDir: string) {
   try {
     const aliasObject = await getConfig('alias');
@@ -11,7 +9,21 @@ export default async function ReplaceImport(targetDir: string) {
       throw new Error('Invalid styles alias');
 
     const stylesAlias = aliasObject.styles;
-    if (stylesAlias === KEYWORDS[0]) return;
+    const componentsAlias = aliasObject.components;
+
+    const compareObject = {
+      '#styles': stylesAlias,
+      '#components': componentsAlias,
+    };
+
+    let isEqual = true;
+    for (const [key, value] of Object.entries(compareObject)) {
+      if (key !== value) {
+        isEqual = false;
+        break;
+      }
+    }
+    if (isEqual) return;
 
     const files = await fs.readdir(targetDir);
 
@@ -30,9 +42,11 @@ export default async function ReplaceImport(targetDir: string) {
         const importRegex =
           /import\s+(?:[\w\s{},*]+\s+from\s+)?['"]([^'"]+)['"]/g;
         content = content.replace(importRegex, (match, importPath) => {
-          for (const keyword of KEYWORDS) {
+          for (const keyword of Object.keys(compareObject) as Array<
+            keyof typeof compareObject
+          >) {
             if (importPath.includes(keyword)) {
-              return match.replace(keyword, stylesAlias);
+              return match.replace(keyword, compareObject[keyword]);
             }
           }
           return match;
