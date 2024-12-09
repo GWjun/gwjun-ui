@@ -1,6 +1,6 @@
 <h1 align="center">GWjun UI</h1>
 
-**A headless design system that uses the [emotion](https://github.com/emotion-js/emotion) css library.**
+**Design system that uses the [vanilla-extract](https://github.com/vanilla-extract-css) css library.**
 <br>
 <br>
 You can inject each component codes into your project, like [shadcn-ui](https://github.com/shadcn-ui/ui)
@@ -16,7 +16,6 @@ If you configured differently, you must input the alias according to the corresp
 /** tsconfig.json */
 {
   "compilerOptions": {
-    // ...
     "baseUrl": ".",
     "paths": {
       "#*": ["./src/*"]

@@ -1,14 +1,8 @@
 import type { ComponentPropsWithRef } from 'react';
 import { forwardRef } from 'react';
-
-import {
-  baseStyles,
-  containerStyles,
-  sizeStyles,
-  variantStyles,
-} from './Input.style';
-
 import Label from '#components/Label';
+import clsx from 'clsx';
+import * as styles from './styles.css';
 
 export interface InputProps
   extends Omit<ComponentPropsWithRef<'input'>, 'size'> {
@@ -18,9 +12,9 @@ export interface InputProps
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, variant = 'default', size = 'md', ...props }, ref) => {
+  ({ label, variant = 'default', size = 'md', className, ...props }, ref) => {
     return (
-      <div css={containerStyles}>
+      <div className={styles.container}>
         {label && (
           <Label id={props.id} required={props.required}>
             {label}
@@ -29,7 +23,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
         <input
           ref={ref}
-          css={[baseStyles, variantStyles[variant], sizeStyles[size]]}
+          className={clsx(styles.inputVariants({ variant, size }), className)}
           {...props}
         />
       </div>

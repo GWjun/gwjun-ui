@@ -1,7 +1,7 @@
 {
   "name": "gwjun-ui",
-  "version": "0.1.7",
-  "description": "headless design-system using the emotion library",
+  "version": "0.2.0",
+  "description": "Design-system using the vanilla-extract library",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
@@ -14,10 +14,9 @@
   },
   "keywords": [
     "gwjun-ui",
-    "headless",
     "design-system",
     "react",
-    "emotion"
+    "vanilla-extract"
   ],
   "scripts": {
     "build": "tsup",

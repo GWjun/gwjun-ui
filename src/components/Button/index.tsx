@@ -1,8 +1,7 @@
 import type { ComponentPropsWithRef } from 'react';
 import { forwardRef } from 'react';
-import { Slot } from '@radix-ui/react-slot';
-
-import { baseStyles, sizeStyles, variantStyles } from './Button.style';
+import clsx from 'clsx';
+import * as styles from './styles.css';
 
 export interface ButtonProps extends ComponentPropsWithRef<'button'> {
   size?: 'sm' | 'md' | 'lg';
@@ -12,20 +11,17 @@ export interface ButtonProps extends ComponentPropsWithRef<'button'> {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { size = 'sm', variant = 'primary', asChild = false, children, ...props },
+    { variant = 'primary', size = 'sm', className, children, ...props },
     ref,
   ) => {
-    const Component = asChild ? Slot : 'button';
-
-    console.log(sizeStyles[size]);
     return (
-      <Component
+      <button
         ref={ref}
-        css={[baseStyles, variantStyles[variant], sizeStyles[size]]}
+        className={clsx(styles.buttonVariants({ variant, size }), className)}
         {...props}
       >
         {children}
-      </Component>
+      </button>
     );
   },
 );
