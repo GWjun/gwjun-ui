@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { theme } from '#shared/lib/styles/theme.css';
+import { theme } from '#styles/theme.css';
 
 export const item = style({
   display: 'flex',

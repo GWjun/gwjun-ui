@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
-import { theme } from '#shared/lib/styles/theme.css';
-import { fadeIn } from '#shared/lib/styles/animation.css';
+import { theme } from '#styles/theme.css';
+import { fadeIn } from '#styles/animation.css';
 
 export const backdrop = style({
   position: 'fixed',

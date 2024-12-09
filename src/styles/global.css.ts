@@ -1,5 +1,5 @@
 import { globalStyle } from '@vanilla-extract/css';
-import { theme } from '#shared/lib/styles/theme.css';
+import { theme } from './theme.css';
 
 globalStyle('body', {
   backgroundColor: theme.colors.background,
@@ -8,7 +8,10 @@ globalStyle('body', {
 });
 
 globalStyle('main', {
-  height: 'calc(100vh - 4rem)',
+  display: 'flex',
+  boxSizing: 'border-box',
+  minHeight: 'calc(100vh - 4rem)',
+  paddingBottom: '2rem',
 });
 
 globalStyle('a', {
@@ -20,7 +23,7 @@ globalStyle('ul, ol, li', {
   listStyle: 'none',
 });
 
-globalStyle('ul', {
+globalStyle('ul, p', {
   padding: 0,
   margin: 0,
 });

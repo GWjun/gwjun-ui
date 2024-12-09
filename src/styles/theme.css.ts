@@ -1,9 +1,5 @@
-import {
-  createGlobalTheme,
-  createTheme,
-  createThemeContract,
-} from '@vanilla-extract/css';
-import colorScales from '#shared/lib/styles/colors';
+import { createGlobalTheme } from '@vanilla-extract/css';
+import colorScales from './colors';
 
 export const global = createGlobalTheme(':root', {
   space: {
@@ -92,31 +88,10 @@ export const global = createGlobalTheme(':root', {
   },
 });
 
-let themeColor = createThemeContract({
-  main: null,
-  mainText: null,
-  border: null,
-
-  primary: null,
-  primaryText: null,
-  primaryActive: null,
-
-  secondary: null,
-  secondaryText: null,
-  secondaryActive: null,
-
-  destructive: null,
-  destructiveText: null,
-  destructiveActive: null,
-
-  background: null,
-  backgroundActive: null,
-});
-
-export const lightTheme = createTheme(themeColor, {
+const themeColor = {
   main: '#fff',
   mainText: '#000',
-  border: '#ddd',
+  border: '#e9e9e9',
 
   primary: '#0095f6',
   primaryText: '#fff',
@@ -132,32 +107,25 @@ export const lightTheme = createTheme(themeColor, {
 
   background: '#fff',
   backgroundActive: '#f3f4f6',
-});
-
-export const darkTheme = createTheme(themeColor, {
-  main: '#1D1F22',
-  mainText: '#fff',
-  border: '#494949',
-
-  primary: '#2d9834',
-  primaryText: '#fff',
-  primaryActive: '#188627',
-
-  secondary: '#1e293b',
-  secondaryText: '#e2e8f0',
-  secondaryActive: '#17202b',
-
-  destructive: '#c51919',
-  destructiveText: '#fff',
-  destructiveActive: '#b71e1e',
-
-  background: '#141517',
-  backgroundActive: '#2a2a2a',
-});
+};
 
 const colors = {
   ...themeColor,
   ...colorScales,
+  brandColor: '#ff9d3b',
 };
 
-export const theme = { ...global, colors };
+const mainWidth = '1280px';
+
+export const breakpoints = {
+  xs: '0px',
+  sm: '640px',
+  md: '768px',
+  lg: '1024px',
+  xl: '1280px',
+  x2l: '1536px',
+  x3l: '1920px',
+  x4l: '2560px',
+} as const;
+
+export const theme = { ...global, colors, mainWidth, breakpoints };

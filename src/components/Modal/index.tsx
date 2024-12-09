@@ -1,7 +1,6 @@
 import type { ComponentPropsWithoutRef } from 'react';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import CloseButton from '#shared/ui/CloseButton';
 import clsx from 'clsx';
 import * as styles from './styles.css';
 
@@ -48,7 +47,7 @@ const Modal = ({
             className={clsx(styles.modal, className)}
             {...props}
           >
-            <CloseButton onClick={onClose} />
+            <div onClick={onClose} >x</div>
             {children}
           </dialog>
         </>
