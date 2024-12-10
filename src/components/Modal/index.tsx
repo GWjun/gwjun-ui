@@ -47,7 +47,9 @@ const Modal = ({
             className={clsx(styles.modal, className)}
             {...props}
           >
-            <div onClick={onClose} >x</div>
+            <button onClick={onClose} className={styles.closeButton}>
+              x
+            </button>
             {children}
           </dialog>
         </>
