@@ -9,16 +9,16 @@ const meta = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'id, required를 props으로 받는 label 컴포넌트',
+        component: 'Label component that accepts `id` and `required` as props.',
       },
     },
   },
   argTypes: {
     id: {
-      description: '연결될 요소를 나태내는 id 값',
+      description: 'ID value that specifies the associated element.',
     },
     required: {
-      description: '필수 요소임을 나태내는 boolean 값',
+      description: 'Boolean value indicating whether the field is required.',
       control: 'boolean',
     },
     children: {

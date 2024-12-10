@@ -9,14 +9,14 @@ const meta = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'variant, size에 따른 button 컴포넌트',
+        component: 'Button component with different variants and sizes.',
       },
     },
   },
   argTypes: {
     variant: {
       description:
-        'button 형식. 형식에 따라 color, border 등의 스타일이 정의됨.',
+        'Defines the button style. Styles such as color and border are determined based on the variant.',
       control: 'select',
       options: ['primary', 'secondary', 'outline', 'text', 'destructive'],
       table: {
@@ -26,7 +26,8 @@ const meta = {
       },
     },
     size: {
-      description: 'button 크기. 사이즈에 따라 padding 값이 상이함.',
+      description:
+        'Defines the button size. Padding values vary depending on the size.',
       control: 'select',
       options: ['sm', 'md', 'lg'],
       table: {
@@ -35,7 +36,7 @@ const meta = {
     },
     asChild: {
       description:
-        'button 이외의 태그를 child로 전달하면, 해당 태그로서 동작함.',
+        'Allows the button to function as a different tag if a child tag is passed.',
       control: { disable: true },
       table: {
         type: { summary: 'false | true' },

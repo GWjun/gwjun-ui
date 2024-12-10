@@ -9,13 +9,14 @@ const meta = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'variant, size에 따른 input 컴포넌트',
+        component: 'Input component with different variants and sizes.',
       },
     },
   },
   argTypes: {
     variant: {
-      description: 'input의 형식. 형식에 따라 border 스타일이 정의됨.',
+      description:
+        'Defines the input style. Border styles are determined based on the variant.',
       control: 'select',
       options: ['default', 'text'],
       table: {
@@ -25,7 +26,8 @@ const meta = {
       },
     },
     size: {
-      description: 'input의 크기. 사이즈에 따라 padding 값이 상이함.',
+      description:
+        'Defines the input size. Padding values vary depending on the size.',
       control: 'select',
       options: ['sm', 'md', 'lg'],
       table: {
