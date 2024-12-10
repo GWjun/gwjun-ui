@@ -1,5 +1,13 @@
 # gwjun-ui
 
+## 0.2.0
+
+- change css library (emotion to vanilla-extract)
+
+<br/><br/><br/>
+
+# old version
+
 ## 0.1.7
 
 ### Patch Changes

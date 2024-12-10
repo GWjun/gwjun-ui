@@ -1,9 +1,44 @@
 import fs from 'fs-extra';
 import * as path from 'path';
 import { input } from '@inquirer/prompts';
+import { execSync } from 'child_process';
+
 import { appendConfig, setConfig } from '../utils/config';
 import fetchFiles from '../utils/fetchFiles';
 import getFiles from '../utils/getFiles';
+
+async function installVanillaExtract() {
+  function detectPackageManager(): string {
+    if (fs.existsSync('yarn.lock')) return 'yarn';
+    if (fs.existsSync('pnpm-lock.yaml')) return 'pnpm';
+    return 'npm';
+  }
+
+  const packageManager = detectPackageManager();
+  const installCommand = {
+    npm: 'npm install',
+    yarn: 'yarn add',
+    pnpm: 'pnpm add',
+  }[packageManager];
+
+  console.log(`Detected package manager: ${packageManager}`);
+  console.log(
+    'Installing @vanilla-extract/recipes and @vanilla-extract/css...',
+  );
+
+  try {
+    execSync(
+      `${installCommand} @vanilla-extract/recipes @vanilla-extract/css`,
+      {
+        stdio: 'inherit',
+      },
+    );
+    console.log('Vanilla Extract packages installed successfully!');
+  } catch (error) {
+    console.error('Error installing Vanilla Extract packages:', error);
+    process.exit(1);
+  }
+}
 
 async function initComponent() {
   const componentsPath = await input({
@@ -19,7 +54,6 @@ async function initComponent() {
     process.exit(1);
   }
 }
-
 async function initComponentConfig() {
   const componentsAlias = await input({
     message: 'Alias for components directory from tsconfig.json:',
@@ -55,7 +89,6 @@ async function initStyles() {
     process.exit(1);
   }
 }
-
 async function initStylesConfig() {
   const stylesAlias = await input({
     message: 'Alias for styles directory from tsconfig.json:',
@@ -73,6 +106,7 @@ async function initStylesConfig() {
 }
 
 export async function init() {
+  await installVanillaExtract();
   await initComponent();
   await initComponentConfig();
 
