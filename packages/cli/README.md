@@ -1,8 +1,14 @@
 # gwjun-ui
 
-A CLI for adding components to your project.
+A CLI tool to directly add component code to your React project.
 
 ## Installation
+
+> If you have not set up a React project, please follow the instructions in the [Getting Started Guide](docs/getting-started-guide.md).
+>
+> If you have already set up a React project, please proceed with the following steps.
+
+### Add tsconfig alias
 
 Add baseUrl and alias in your `tsconfig.json` to correctly configure the import paths for utility functions.
 <br>
@@ -10,7 +16,6 @@ Add baseUrl and alias in your `tsconfig.json` to correctly configure the import 
 If configured differently, you must input the alias according to the corresponding path when running `init`.
 
 ```json
-/** tsconfig.json */
 {
   "compilerOptions": {
     // ...
@@ -24,6 +29,11 @@ If configured differently, you must input the alias according to the correspondi
 
 > **Note** <br>
 > If you are using other frameworks or build tool such as `Vite`, additional steps may be required to configure `alias`.
+>
+> Please refer to the documentation in the [Getting Started Guide](docs/getting-started-guide.md) for detailed instructions.
+
+<br/>
+<br/>
 
 ## Usage
 
@@ -31,7 +41,7 @@ If configured differently, you must input the alias according to the correspondi
 
 Use the `init` command to initialize dependencies for a new project.
 
-The `init` command sets up the component-config.json file, which makes configuration settings.
+The `init` command sets up the `component-config.json` file, which makes configuration settings.
 
 ```bash
 npx gwjun-ui init

@@ -22,13 +22,11 @@ async function installVanillaExtract() {
   }[packageManager];
 
   console.log(`Detected package manager: ${packageManager}`);
-  console.log(
-    'Installing @vanilla-extract/recipes and @vanilla-extract/css...',
-  );
+  console.log('Installing vanilla-extract and clsx...');
 
   try {
     execSync(
-      `${installCommand} @vanilla-extract/recipes @vanilla-extract/css`,
+      `${installCommand} @vanilla-extract/recipes @vanilla-extract/css clsx`,
       {
         stdio: 'inherit',
       },

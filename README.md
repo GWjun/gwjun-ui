@@ -7,13 +7,18 @@ You can inject each component codes into your project, like [shadcn-ui](https://
 
 ## Installation
 
+> If you have not set up a React project, please follow the instructions in the [Getting Started Guide](/packages/cli/docs/getting-started-guide.md).
+>
+> If you have already set up a React project, please proceed with the following steps.
+
+### Add tsconfig alias
+
 Add baseUrl and alias in your `tsconfig.json` to correctly configure the import paths for utility functions.
 <br>
 <br>
 If you configured differently, you must input the alias according to the corresponding path when running `init`.
 
 ```json
-/** tsconfig.json */
 {
   "compilerOptions": {
     "baseUrl": ".",
@@ -26,6 +31,11 @@ If you configured differently, you must input the alias according to the corresp
 
 > **Note** <br>
 > If you are using other frameworks or build tool such as `Vite`, additional steps may be required to configure `alias`.
+>
+> Please refer to the documentation in the [Getting Started Guide](/packages/cli/docs/getting-started-guide.md) for detailed instructions.
+
+<br/>
+<br/>
 
 ## Usage
 

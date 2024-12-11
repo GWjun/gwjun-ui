@@ -1,6 +1,6 @@
 {
   "name": "gwjun-ui",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Design-system using the vanilla-extract library",
   "main": "dist/index.js",
   "type": "module",

@@ -1,6 +1,10 @@
 # gwjun-ui
 
-## 0.2.0
+## 0.2.2
+
+- add clsx package install script
+
+## 0.2.1
 
 - change css library (emotion to vanilla-extract)
 
