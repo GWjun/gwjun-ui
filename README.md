@@ -1,9 +1,15 @@
 <h1 align="center">GWjun UI</h1>
 
-**Design system that uses the [vanilla-extract](https://github.com/vanilla-extract-css) css library.**
+**Collection of re-useable components that uses the [vanilla-extract](https://github.com/vanilla-extract-css) css library.**
 <br>
 <br>
-You can inject each component codes into your project, like [shadcn-ui](https://github.com/shadcn-ui/ui)
+This project is inspired by [shadcn-ui](https://github.com/shadcn-ui/ui) and [radix-ui](https://github.com/radix-ui/primitives).
+<br>
+You can **inject** each component **codes** into your project, like **shadcn-ui**
+
+You can explore the **Storybook** docs for the deployed components [here](https://6757cbfcde245d5595fbd83a-ycfpsyzsfp.chromatic.com/).
+
+<br>
 
 ## Installation
 
@@ -21,6 +27,7 @@ If you configured differently, you must input the alias according to the corresp
 ```json
 {
   "compilerOptions": {
+    // ...
     "baseUrl": ".",
     "paths": {
       "#*": ["./src/*"]
@@ -34,7 +41,6 @@ If you configured differently, you must input the alias according to the corresp
 >
 > Please refer to the documentation in the [Getting Started Guide](/packages/cli/docs/getting-started-guide.md) for detailed instructions.
 
-<br/>
 <br/>
 
 ## Usage
@@ -65,8 +71,31 @@ npx gwjun-ui add [component]
 npx gwjun-ui add button
 ```
 
+<br/>
+
 ## Components
 
-- [Button](https://github.com/GWjun/gwjun-ui/tree/main/src/components/Button)
-- [Input](https://github.com/GWjun/gwjun-ui/tree/main/src/components/Input)
-- [Label](https://github.com/GWjun/gwjun-ui/tree/main/src/components/Label)
+- [Avatar](src/components/Avatar)
+- [Button](src/components/Button)
+- [Input](src/components/Input)
+- [Label](src/components/Label)
+- [Menu](src/components/Menu)
+- [MenuItem](src/components/MenuItem)
+- [Modal](src/components/Modal)
+- [Skeleton](src/components/Skeleton)
+- [Toast](src/components/Toast)
+
+<br/>
+
+## References
+
+This project references code and concepts from [shadcn-ui](https://github.com/shadcn-ui/ui) and [radix-ui](https://github.com/radix-ui/primitives).  
+Components are styled using the [vanilla-extract](https://github.com/vanilla-extract-css).
+
+<br/>
+
+## License
+
+Licensed under the MIT License, Copyright (c) 2024 Gwang Jun
+
+See [LICENSE](LICENSE) for more information.
